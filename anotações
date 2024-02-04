@@ -1,0 +1,31 @@
+Alinhamento Horizontal:
+
+text-align: Use essa propriedade para alinhar o texto dentro de um elemento, como um parágrafo (<p>), uma div (<div>), ou qualquer outro elemento de bloco que contenha texto.
+
+left: Alinha o texto à esquerda.
+center: Centraliza o texto.
+right: Alinha o texto à direita.
+justify: Distribui uniformemente o texto entre as margens esquerda e direita, criando espaços adicionais entre as palavras, exceto a última linha.
+justify-content: Utilize esta propriedade em contêineres flexíveis (display: flex) para controlar o alinhamento dos itens ao longo do eixo principal.
+
+flex-start: Alinha os itens ao início do contêiner.
+flex-end: Alinha os itens ao final do contêiner.
+center: Centraliza os itens dentro do contêiner.
+space-between: Distribui uniformemente os itens ao longo do contêiner, com espaçamento igual entre eles, mas não nas extremidades.
+space-around: Distribui uniformemente os itens ao longo do contêiner, com espaçamento igual em torno deles, incluindo as extremidades.
+space-evenly: Distribui uniformemente os itens ao longo do contêiner, com espaçamento igual em torno deles, incluindo as extremidades e entre os itens.
+Alinhamento Vertical:
+
+align-items: Use esta propriedade em contêineres flexíveis (display: flex) para alinhar os itens ao longo do eixo transversal.
+
+stretch: Estica os itens para preencher o contêiner.
+flex-start: Alinha os itens no início do contêiner ao longo do eixo transversal.
+flex-end: Alinha os itens no final do contêiner ao longo do eixo transversal.
+center: Centraliza os itens ao longo do eixo transversal.
+baseline: Alinha os itens pela linha de base de seu conteúdo.
+align-self: Utilize esta propriedade em itens individuais dentro de contêineres flexíveis para substituir o alinhamento definido pelo align-items.
+
+Alinhamento de Elementos Inline e Blocos:
+
+Para elementos de bloco, você pode usar propriedades como margin, padding, display, position etc., para controlar o alinhamento vertical e horizontal dos elementos dentro do layout.
+Espero que isso ajude a esclarecer quando e como usar cada tipo de alinhamento em CSS!

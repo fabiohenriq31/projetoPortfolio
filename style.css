@@ -1,0 +1,162 @@
+* /*Seletor universal*/ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255,255,255, 0.5);
+  --surface-color:rgba(255,255,255, 0.1);
+  --button-color:rgba(255, 255, 255, 0.2);
+  --moon-or-sun:url(./assets/moon-stars.svg)
+}
+.light{
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0,0,0, 0.5);
+  --surface-color: rgba(0,0,0, 0.05);
+  --button-color: rgba(0, 0, 0, 0.2);
+  --moon-or-sun:url(./assets/sun.svg)
+}
+
+body {
+  /*
+  background-image: url(./Imagens/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  /*background: color image repeat position/size (tranformei tudo em uma propriedade short hand ou atalho*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  margin: 24px auto 14px;
+}
+#profile img {
+  width: 112px;
+}
+#switch {
+  width: 64px;
+  position: relative;
+  margin: 4px auto;
+  
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--moon-or-sun) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span{
+  display: block;
+  border-radius: 9999px;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
+}
+/* o asterisco significa que é um elemento universal, ele vai aplicar aqueles códigos dentro de todo o elemento body*/
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+#profile p {
+  padding: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  
+}
+
+#socialmedia {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+  
+  
+  font-size: 30px;
+  transition: background 0.2s;
+}
+#socialmedia a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#socialmedia a:hover{
+  padding: 16px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  
+  display: flex;
+  flex-direction: column;      /* Coloca todos os itens dentro do ul em uma coluna */
+
+  gap: 8px; /* Coloca espaço entre os elementos */ 
+
+  padding: 16px 0;
+}
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  
+
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s; /* cria uma transição no background */
+}
+/* pseudo-selector, quando utilizo o hover ele altera a ação ao passar o mouse por cima */
+ul li a:hover {
+  background: var(--button-color);
+  border: 1.5px solid var(--text-color);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
