@@ -9,18 +9,18 @@
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color: rgba(255,255,255, 0.5);
-  --surface-color:rgba(255,255,255, 0.1);
-  --button-color:rgba(255, 255, 255, 0.2);
-  --moon-or-sun:url(./assets/moon-stars.svg)
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --button-color: rgba(255, 255, 255, 0.2);
+  --moon-or-sun: url(./assets/moon-stars.svg);
 }
-.light{
+.light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0,0,0, 0.5);
-  --surface-color: rgba(0,0,0, 0.05);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
   --button-color: rgba(0, 0, 0, 0.2);
-  --moon-or-sun:url(./assets/sun.svg)
+  --moon-or-sun: url(./assets/sun.svg);
 }
 
 body {
@@ -36,7 +36,8 @@ body {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -52,7 +53,6 @@ body {
   width: 64px;
   position: relative;
   margin: 4px auto;
-  
 }
 
 #switch button {
@@ -73,7 +73,7 @@ body {
   left: initial;
 }
 
-#switch span{
+#switch span {
   display: block;
   border-radius: 9999px;
   width: 64px;
@@ -82,7 +82,6 @@ body {
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  
 }
 /* o asterisco significa que é um elemento universal, ele vai aplicar aqueles códigos dentro de todo o elemento body*/
 
@@ -95,7 +94,6 @@ body * {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  
 }
 
 #socialmedia {
@@ -103,18 +101,17 @@ body * {
   justify-content: center;
 
   padding: 24px 0;
-  
-  
+
   font-size: 30px;
   transition: background 0.2s;
 }
-#socialmedia a{
+#socialmedia a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
 }
-#socialmedia a:hover{
+#socialmedia a:hover {
   padding: 16px;
   background-color: var(--button-color);
   border-radius: 50%;
@@ -122,11 +119,11 @@ body * {
 
 ul {
   list-style: none;
-  
-  display: flex;
-  flex-direction: column;      /* Coloca todos os itens dentro do ul em uma coluna */
 
-  gap: 8px; /* Coloca espaço entre os elementos */ 
+  display: flex;
+  flex-direction: column; /* Coloca todos os itens dentro do ul em uma coluna */
+
+  gap: 8px; /* Coloca espaço entre os elementos */
 
   padding: 16px 0;
 }
@@ -135,7 +132,6 @@ ul li a {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  
 
   padding: 16px 24px;
   background: var(--surface-color);
@@ -160,3 +156,101 @@ footer {
   text-align: center;
   font-size: 14px;
 }
+
+#container-about img {
+  width: 450px;
+  height: 600px;
+  opacity: 0.5;
+  border-radius: 20%;
+}
+
+#container-about{
+  display: flex;
+  margin: 56px 56px 0px;
+  padding: 0 24px;
+  align-items: center;
+}
+#container-about p {
+  font-size: 20px;
+  margin: 20px;
+}
+#developer {
+  font-size: 24px;
+  color: rgba(252, 227, 0, 0.774);
+  font-weight: bold;
+}
+#developer:hover{
+  font-size: 30px;
+}
+
+  .timeline {
+      position: relative;
+      margin: 50px auto;
+      width: 80%;
+      height: 20px;
+
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .line {
+      position: absolute;
+      height: 100%;
+      background-color: #007bff;
+      transition: width 0.3s ease;
+    }
+
+    .bullet {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #007bff;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .bullet.active, .bullet.active + .bullet {
+      opacity: 1;
+    }
+
+    .bullet.active + .bullet {
+      opacity: 0.5;
+    }
+
+    .bullet p {
+      display: none;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #333;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .bullet.active p {
+      display: block;
+      opacity: 1;
+    }
+
+  #infoContainer{
+    
+    padding: 2%;
+    margin:10px auto;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.082);
+  }

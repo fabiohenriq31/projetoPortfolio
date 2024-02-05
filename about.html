@@ -6,5 +6,40 @@
     <link rel="stylesheet" href="style.css" />
     <title>Sobre</title>
   </head>
-  <body></body>
+  <body>
+    <div id="about">
+      <div id="container-about">
+        <img
+          src="/assets/my-image.jpg"
+          alt="Imagem, Fábio em uma arvore, próximo a um lago olhando para o chão"
+        />
+        <div id="description">
+          <p>Olá, meu nome é Fábio!</p>
+          <p id="developer">DESENVOLVEDOR <br />FULL STACK</p>
+          <p>
+            Sou estudante de Sistemas de Informação no IFMG, estou estudando
+            para me tornar um desenvolvedor full stack.
+          </p>
+          
+        </div>
+      </div>
+      <div class="timeline">
+  <div class="line" style="width: 0;"></div>
+  <div class="bullet active" style="left: 2%;" onclick="showInfo(2020)">20</div>
+  <div class="bullet" style="left: 22%;" onclick="showInfo(2021)">21</div>
+  <div class="bullet" style="left: 42%;" onclick="showInfo(2022)">22</div>
+  <div class="bullet" style="left: 62%;" onclick="showInfo(2023)">23</div>
+  <div class="bullet" style="left: 82%;" onclick="showInfo(2024)">24</div>
+</div>
+
+<div id="infoContainer">
+  <p id="info2020" style="display: block;">Iniciando os estudos no IFMG</p>
+  <p id="info2021" style="display: none;">Aulas interrompidas devido à pandemia</p>
+  <p id="info2022" style="display: none;">Estudo tímido de JavaScript e retorno às aulas no IFMG</p>
+  <p id="info2023" style="display: none;">Realização de cursos de JavaScript e Python para avanço do conhecimento</p>
+  <p id="info2024" style="display: none;">Conclusão de cursos e início dos estudos na RocketSeat</p>
+</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
