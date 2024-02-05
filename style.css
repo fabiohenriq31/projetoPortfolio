@@ -33,6 +33,7 @@ body {
   /*background: color image repeat position/size (tranformei tudo em uma propriedade short hand ou atalho*/
 
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
@@ -164,7 +165,7 @@ footer {
   border-radius: 20%;
 }
 
-#container-about{
+#container-about {
   display: flex;
   margin: 56px 56px 0px;
   padding: 0 24px;
@@ -179,78 +180,87 @@ footer {
   color: rgba(252, 227, 0, 0.774);
   font-weight: bold;
 }
-#developer:hover{
+#developer:hover {
   font-size: 30px;
 }
 
-  .timeline {
-      position: relative;
-      margin: 50px auto;
-      width: 80%;
-      height: 20px;
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  width: 80%;
+  height: 20px;
 
-      border-radius: 20px;
-      overflow: hidden;
-    }
-    .line {
-      position: absolute;
-      height: 100%;
-      background-color: #007bff;
-      transition: width 0.3s ease;
-    }
+  border-radius: 20px;
+  overflow: hidden;
+}
+.line {
+  position: absolute;
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
 
-    .bullet {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: #007bff;
-      border-radius: 50%;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
-      color: #fff;
-    }
+.bullet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #fff;
+}
 
-    .bullet.active, .bullet.active + .bullet {
-      opacity: 1;
-    }
+.bullet.active,
+.bullet.active + .bullet {
+  opacity: 1;
+}
 
-    .bullet.active + .bullet {
-      opacity: 0.5;
-    }
+.bullet.active + .bullet {
+  opacity: 0.5;
+}
 
-    .bullet p {
-      display: none;
-      position: absolute;
-      top: -70px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(255, 255, 255, 0.8);
-      color: #333;
-      padding: 10px;
-      border-radius: 20px;
-      font-size: 14px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transition: opacity 0.3s ease;
-      opacity: 0;
-    }
+.bullet p {
+  display: none;
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
 
-    .bullet.active p {
-      display: block;
-      opacity: 1;
-    }
+.bullet.active p {
+  display: block;
+  opacity: 1;
+}
 
-  #infoContainer{
-    
-    padding: 2%;
-    margin:10px auto;
-    width: 300px;
-    height: 100px;
-    border-radius: 20px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.082);
+#infoContainer {
+  padding: 2%;
+  margin: 10px auto;
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.082);
+}
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
